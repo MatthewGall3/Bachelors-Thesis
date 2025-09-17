@@ -1,52 +1,45 @@
-# Bachelors-Thesis
 Phase-Field Models with Multiple Resolution Grids
 
-This repository contains the code and results from my undergraduate thesis:
-Phase-Field Models with Multiple Resolution Grids: Stability and Convergence.
+This is my undergraduate thesis project for Applied and Computational Mathematics at University College Dublin. The goal was to study phase-field models for simulating melting and solidification, focusing on stability, convergence, and computational efficiency.
 
-The project investigates phase-field models for simulating phase-change processes such as melting and solidification. Instead of tracking a sharp interface, the phase-field method smooths it into a diffuse region, making the equations easier to simulate. My work focused on:
+We started with a 1D Stefan problem (melting from a heated boundary), then applied asymptotic analysis and finally developed a multi-resolution grid method to reduce computational cost while preserving accuracy.
 
-Stability & convergence of numerical methods
+1 – Analytical vs Numerical Temperature Profiles
 
-Asymptotic analysis to reduce initial errors
+We compared the analytical Stefan solution with numerical simulations of the phase-field model.
 
-Multiple-resolution grids for efficiency (fine grid for the phase-field variable, coarse grid for temperature)
+The numerical solution (dashed) matches the analytical solution (solid) closely.
 
-Key Results & Figures
-1. Temperature Profile Over Time
+The small discrepancy at the interface is due to the phase-field’s “smoothing” effect.
 
-Compares analytical (blue) vs. numerical (dashed black) solutions of the 1D Stefan problem.
+2 – Asymptotic Expansion of Initial Conditions
 
-Shows that the phase-field model reproduces the analytical solution well, validating the numerical scheme.
+A sharp initial condition introduced a persistent error jump in the first timestep.
 
-The slight mismatch at the interface highlights inherent “smoothing” from the diffuse interface.
+By applying asymptotic analysis, we corrected this and constructed a smoother initial condition.
 
-2. Asymptotic Expansion of Initial Condition
+This improved spatial convergence and reduced long-term errors in the simulations.
 
-The sharp analytical initial condition introduces a persistent error jump at the first timestep.
+3 – Multiple Resolution vs Single Grid
 
-Asymptotic expansion smooths this initial condition by blending outer and inner solutions.
+Finally, we implemented a multiple resolution method:
 
-Result: A corrected profile (T_new, red dashed) that improves spatial convergence and reduces error growth.
+Phase-field variable (ϕ) solved on a fine grid
 
-3. Multiple Resolution vs. Single Grid
+Temperature (T) solved on a coarse grid
 
-Runtime comparison between single-grid and multiple-resolution methods.
+This approach achieved similar or better accuracy while reducing runtime by up to 2× at high resolutions.
 
-Multiple resolution (fine grid for phase-field ϕ, coarse grid for temperature T) achieves:
+4 – Extension to 2D
 
-Comparable or better accuracy
+The method was extended to 2D problems to include curvature effects (Gibbs–Thomson relation). This validated the robustness of the approach in more realistic geometries.
 
-Up to 2× faster performance at high resolutions
+5 – Key Outcomes
 
-Demonstrates that computational efficiency can be substantially improved without sacrificing accuracy.
+Crank–Nicolson scheme improved stability.
 
-Contributions
+Asymptotic expansion fixed initial-condition errors.
 
-Implemented Crank–Nicolson scheme for stability.
+Multiple resolution grids provided major computational savings.
 
-Applied asymptotic analysis to improve convergence.
-
-Developed a multi-resolution method for phase-field models — a novel application in this context.
-
-Extended the approach to 2D problems with curvature (capturing Gibbs–Thomson effects).
+Extended successfully to 2D with curvature effects.
