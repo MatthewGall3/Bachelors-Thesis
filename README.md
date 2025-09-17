@@ -7,7 +7,7 @@ We started with a 1D Stefan problem (melting from a heated boundary), This probl
 ***
 1-Analytical vs Numerical Temperature Profiles
 
-We compared the analytical Stefan solution with numerical simulations of the phase-field model.The numerical solution (dashed) matches the analytical solution (solid) closely. The small discrepancy at the interface is due to the phase-field’s “smoothing” effect.
+We compared the analytical Stefan solution with numerical simulations of the phase-field model. The numerical solution (dashed) matches the analytical solution (solid) closely. The small discrepancy at the interface is due to the phase-field’s “smoothing” effect.
 <img width="800" height="600" alt="Temperature_Profile" src="https://github.com/user-attachments/assets/f4842c1e-7e59-4613-89a6-9dadebac84c3" />
 
 
