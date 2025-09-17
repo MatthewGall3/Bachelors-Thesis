@@ -1,8 +1,13 @@
-Phase-Field Models with Multiple Resolution Grids
+# Phase-Field Models with Multiple Resolution Grids: Stability and Convergence 
 
-This is my undergraduate thesis project for Applied and Computational Mathematics at University College Dublin. The goal was to study phase-field models for simulating melting and solidification, focusing on stability, convergence, and computational efficiency.
+This is my undergraduate thesis project for Applied and Computational Mathematics at University College Dublin. The goal was to study phase-field models for simulating melting and solidification, focusing on stability, convergence, and computational efficiency. We started with a 1D Stefan problem (melting from a heated boundary), then applied asymptotic analysis and finally developed a multi-resolution grid method to reduce computational cost while preserving accuracy.
 
-We started with a 1D Stefan problem (melting from a heated boundary), then applied asymptotic analysis and finally developed a multi-resolution grid method to reduce computational cost while preserving accuracy.
+***
+1-Move each point of the river out in the orthonormal direction of the point by an amount proportional to a constant times the square root of the width of the river at that point and the curvature at that point.
+***
+
+
+
 
 1 – Analytical vs Numerical Temperature Profiles
 
