@@ -23,6 +23,8 @@ This improved spatial convergence and reduced long-term errors in the simulation
 3 – Multiple Resolution vs Single Grid
 
 Finally, we implemented a multiple resolution method: Phase-field variable (ϕ) solved on a fine grid, Temperature (T) solved on a coarse grid This approach achieved similar or better accuracy while reducing runtime by up to 2× at high resolutions.
+
+
 <img width="447" height="240" alt="Screenshot 2025-09-17 at 18 01 23" src="https://github.com/user-attachments/assets/2e5018b4-6b1e-4a40-a0a2-737fc47c2755" />
 
 ***
